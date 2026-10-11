@@ -1,56 +1,171 @@
-# Welcome to your Expo app 👋
+# Focus Timer
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## About the Application
 
-## Get started
+Focus Timer is a simple mobile timer application developed using React Native and Expo. It is designed to help users manage their time for different activities such as studying, taking breaks, and exercising.
 
-1. Install dependencies
+The application allows users to choose a specific duration using hours, minutes, and seconds. Instead of repeatedly pressing buttons to set the time, users can scroll through the time picker to easily select their desired duration.
 
-   ```bash
-   npm install
-   ```
+The app also provides timer modes, a countdown display, a circular progress indicator, pause and resume controls, and a recently used section for previously selected timers.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## Features
 
-In the output, you'll find options to open the app in a
+### 1. Time Picker
+Users can select their desired timer duration using three scrollable time selectors:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Hours
+- Minutes
+- Seconds
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+For example:
 
-## Get a fresh project
+`01 : 30 : 20`
 
-When you're ready, run:
+means 1 hour, 30 minutes, and 20 seconds.
 
-```bash
-npm run reset-project
-```
+### 2. Timer Modes
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Users can choose from different timer modes:
 
-### Other setup steps
+- Study
+- Break
+- Exercise
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+The selected mode is displayed when the timer is running.
 
-## Learn more
+### 3. Countdown Timer
 
-To learn more about developing your project with Expo, look at the following resources:
+After pressing the **Start Timer** button, the selected time begins to count down automatically.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+The timer displays:
 
-## Join the community
+- Hours
+- Minutes
+- Seconds
+- Current clock time
+- Selected timer duration
 
-Join our community of developers creating universal apps.
+### 4. Circular Timer Progress
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The running timer has a circular progress indicator.
+
+As the remaining time decreases, the circle also decreases to give the user a visual representation of the remaining time.
+
+### 5. Pause and Resume
+
+The timer can be paused at any time.
+
+When the timer is paused, the button changes to **Resume**, allowing the user to continue the timer from where it stopped.
+
+### 6. Delete Timer
+
+The **Delete** button stops the current timer and returns the user to the main timer setup screen.
+
+### 7. Recently Used
+
+The application records recently selected timer settings.
+
+Each record shows:
+
+- Timer mode
+- Hours
+- Minutes
+- Seconds
+
+Users can select a previous timer from the Recently Used section and use the same settings again.
+
+### 8. See More
+
+The main screen only displays a limited number of recent timers to keep the interface organized.
+
+If there are more records, users can select **See More** to view additional timer records.
+
+### 9. Current Time
+
+The application displays the current time using a 12-hour format, including AM and PM.
+
+Example:
+
+`7:20 PM`
+
+---
+
+## Technologies Used
+
+- React Native
+- Expo
+- TypeScript
+- React Hooks
+- `useState`
+- `useEffect`
+- React Native `ScrollView`
+- React Native `TouchableOpacity`
+- React Native `StyleSheet`
+- `react-native-svg`
+
+---
+
+## Main React Native Concepts Used
+
+### useState
+
+Used to store and update information such as:
+
+- Selected hours
+- Selected minutes
+- Selected seconds
+- Timer status
+- Timer mode
+- Recently used timers
+- Completed sessions
+
+### useEffect
+
+Used for functions that need to run automatically, such as:
+
+- Updating the current time
+- Running the countdown timer
+
+### ScrollView
+
+Used for the scrollable hour, minute, and second selectors.
+
+### TouchableOpacity
+
+Used for buttons and selectable options such as:
+
+- Start Timer
+- Pause
+- Resume
+- Delete
+- Timer Modes
+- Recently Used timers
+
+### StyleSheet
+
+Used to organize the application's design, including:
+
+- Colors
+- Font sizes
+- Spacing
+- Rounded corners
+- Button styles
+- Timer layout
+
+### React Native SVG
+
+Used to create the circular progress indicator around the running timer.
+
+---
+
+## How to Run the Application
+
+### 1. Install Node.js
+
+Make sure Node.js is installed on your computer.
+
+### 2. Open the Project Folder
+
+Open the project folder in Visual Studio Code.
