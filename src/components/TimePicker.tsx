@@ -1,10 +1,10 @@
 
 import type { RefObject } from 'react';
 import {
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 
 const ITEM_HEIGHT = 48;
